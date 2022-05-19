@@ -619,7 +619,7 @@ const AppLogoBurger = ({ slider, project_images }) => {
                     <img
                       style={{ cursor: "pointer" }}
                       id="hide-more-picture"
-                      src="${process.env.NEXT_PUBLIC_IMAGE_PATH}/images/hide-slider.png"
+                      src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/images/hide-slider.png`}
                       alt="hide slider"
                     />
                   </div>
