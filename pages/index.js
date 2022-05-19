@@ -18,7 +18,7 @@ import HomeFeaturedProjects from "../components/HomeFeaturedProjects";
 import AppLogoBurger from "../components/AppLogoBurger";
 // import site from "../public/js/site";
 
-export default function Home() {
+function Home({ featured_projects }) {
   useEffect(() => {
     // site();
     console.log("site is called at home");
@@ -142,7 +142,7 @@ export default function Home() {
               className="col-md-12 second-slide"
               style={{ padding: 0, backgroundColor: "#ebeaea" }}
             >
-              <HomeFeaturedProjects />
+              <HomeFeaturedProjects featured_projects={featured_projects} />
 
               <HomeAboutBlock />
 
@@ -692,3 +692,14 @@ $(document).on('click', '.close', function() {
     </div>
   );
 }
+
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const res = await fetch(`https://hbaarchitecture.com/2022/api/home`);
+  const data = await res.json();
+  // console.log(data);
+  // Pass data to the page via props
+  return { props: { featured_projects: data.featured_projects } };
+}
+
+export default Home;
