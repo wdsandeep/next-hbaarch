@@ -27,12 +27,9 @@ const AppMenu = () => {
             <div className="col-lg-9 col-md-10 pull-left paddLeftNone">
               <ul className="topMenu" style={{ opacity: 1 }}>
                 <li id="project" style={{ opacity: 0 }}>
-                  <a
-                    className="add-opacity  "
-                    href="https://hbaarchitecture.com/2022/project"
-                  >
-                    Projects
-                  </a>
+                  <Link href={"/project"}>
+                    <a className="add-opacity  ">Projects</a>
+                  </Link>
                   &nbsp;
                 </li>
 
