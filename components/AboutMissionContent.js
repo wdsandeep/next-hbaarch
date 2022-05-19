@@ -62,7 +62,7 @@ const AboutMissionContent = () => {
                 >
                   <img
                     alt=" "
-                    src="https://hbaarchitecture.com/2022/images/about/about-mission-img.jpg"
+                    src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/images/about/about-mission-img.jpg`}
                   />
                 </div>
               </div>

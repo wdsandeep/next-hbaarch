@@ -194,7 +194,9 @@ const AboutMethodology = () => {
             <div className="metho-img-wth">
               <h1>Phase 1</h1>
               <h2>Concept Design</h2>
-              <img src="https://hbaarchitecture.com/2022/images/about/metho-img-01.jpg" />
+              <img
+                src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/images/about/metho-img-01.jpg`}
+              />
 
               <ul style={{ listStyle: "disc", marginLeft: "1em" }}>
                 <li>Confirmation of Project Scope</li>
@@ -206,7 +208,9 @@ const AboutMethodology = () => {
             <div className="metho-img-wth">
               <h1>Phase 2</h1>
               <h2>Schematic Design</h2>
-              <img src="https://hbaarchitecture.com/2022/images/about/metho-img-02.jpg" />
+              <img
+                src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/images/about/metho-img-02.jpg`}
+              />
 
               <ul style={{ listStyle: "disc", marginLeft: "1em" }}>
                 <li>Integration of all project components</li>
@@ -220,7 +224,9 @@ const AboutMethodology = () => {
             <div className="metho-img-wth">
               <h1>Phase 3</h1>
               <h2>Design Development</h2>
-              <img src="https://hbaarchitecture.com/2022/images/about/metho-img-03.jpg" />
+              <img
+                src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/images/about/metho-img-03.jpg`}
+              />
               <ul style={{ listStyle: "disc", marginLeft: "1em" }}>
                 <li>
                   Development of design drawings to describe the design intent
@@ -232,7 +238,9 @@ const AboutMethodology = () => {
             <div className="metho-img-wth">
               <h1>Phase 4</h1>
               <h2>Construction Documents</h2>
-              <img src="https://hbaarchitecture.com/2022/images/about/metho-img-04.jpg" />
+              <img
+                src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/images/about/metho-img-04.jpg`}
+              />
               <ul style={{ listStyle: "disc", marginLeft: "1em" }}>
                 <li>
                   Review Construction Documents prepared by the Local Architects
@@ -244,7 +252,9 @@ const AboutMethodology = () => {
             <div className="metho-img-wth">
               <h1>Phase 5</h1>
               <h2>Authorship Review</h2>
-              <img src="https://hbaarchitecture.com/2022/images/about/metho-img-05.jpg" />
+              <img
+                src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/images/about/metho-img-05.jpg`}
+              />
               <ul
                 style={{
                   listStyle: "disc",

@@ -1,5 +1,6 @@
 import React from "react";
 import Script from "next/script";
+import Link from "next/link";
 const AppFooterLocationTop = () => {
   return (
     <>
@@ -9,11 +10,18 @@ const AppFooterLocationTop = () => {
           className=" col-md-12 text-center contact-link"
           style={{ padding: "4.2em 7%", opacity: 1 }}
         >
-          <a href="https://hbaarchitecture.com/2022/contact">Contact Us</a>
+          <Link href={"/contact"}>
+            <a style={{ cursor: "pointer" }}>Contact Us</a>
+          </Link>
           <span className="mid-links">/</span>
-          <a href="#" className="form-request-btn career-form-popup">
-            Careers
-          </a>
+          <Link href={"/career"}>
+            <a
+              style={{ cursor: "pointer" }}
+              className="form-request-btn career-form-popup"
+            >
+              Careers
+            </a>
+          </Link>
         </div>
       </div>
 

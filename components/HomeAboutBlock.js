@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const HomeAboutBlock = () => {
   return (
@@ -94,51 +95,54 @@ const HomeAboutBlock = () => {
         </div>
 
         <div className="col-md-12 y-ovr" style={{ padding: 0 }}>
-          <a href="https://hbaarchitecture.com/2022/about">
-            <div className="col-md-1 vertical-text" style={{ opacity: 1 }}>
-              <div>
-                &nbsp;/&nbsp; <strong>About Us</strong>
-              </div>
-            </div>
-            <div className="home-about col-md-12 pull-right">
-              <div
-                className="about_us_block_heading col-md-6 col-sm-12"
-                style={{ opacity: 1 }}
-              >
-                <div
-                  className="col-md-11 col-sm-12"
-                  style={{ padding: 0, margin: 0 }}
-                >
-                  <h2 style={{ padding: 0, margin: 0 }}>
-                    HBAarchitecture is a global design practice
-                    strategically-positioned for the new era of Architecture
-                    design, development and brand interaction.
-                  </h2>
+          <Link href={"/about"}>
+            <a style={{ cursor: "pointer" }}>
+              <div className="col-md-1 vertical-text" style={{ opacity: 1 }}>
+                <div>
+                  &nbsp;/&nbsp; <strong>About Us</strong>
                 </div>
               </div>
+              <div className="home-about col-md-12 pull-right">
+                <div
+                  className="about_us_block_heading col-md-6 col-sm-12"
+                  style={{ opacity: 1 }}
+                >
+                  <div
+                    className="col-md-11 col-sm-12"
+                    style={{ padding: 0, margin: 0 }}
+                  >
+                    <h2 style={{ padding: 0, margin: 0 }}>
+                      HBAarchitecture is a global design practice
+                      strategically-positioned for the new era of Architecture
+                      design, development and brand interaction.
+                    </h2>
+                  </div>
+                </div>
 
-              <div
-                className="about_us_block_content col-md-6 col-sm-12"
-                style={{ opacity: 1, textAlign: "justify" }}
-              >
-                <p>
-                  Our mission is to create Architecture with innovative design
-                  solutions of enduring quality that proudly celebrate, respect
-                  and embody the unique heritage of each community and offer
-                  valuable, sustainable and enriching visions for its future.
-                </p>
-                <br className="hide-xs" />
-                <p>
-                  HBAarchitecture creates inspirational Architecture for
-                  landmark projects of exceptional design and enduring quality
-                  and provides a personalised service tailored to suit the
-                  unique aspirations of discerning clients that mandate and
-                  achieve design excellence for their luxury projects and
-                  markets worldwide.
-                </p>
+                <div
+                  className="about_us_block_content col-md-6 col-sm-12"
+                  style={{ opacity: 1, textAlign: "justify" }}
+                >
+                  <p>
+                    Our mission is to create Architecture with innovative design
+                    solutions of enduring quality that proudly celebrate,
+                    respect and embody the unique heritage of each community and
+                    offer valuable, sustainable and enriching visions for its
+                    future.
+                  </p>
+                  <br className="hide-xs" />
+                  <p>
+                    HBAarchitecture creates inspirational Architecture for
+                    landmark projects of exceptional design and enduring quality
+                    and provides a personalised service tailored to suit the
+                    unique aspirations of discerning clients that mandate and
+                    achieve design excellence for their luxury projects and
+                    markets worldwide.
+                  </p>
+                </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </Link>
         </div>
       </div>
       <div
@@ -149,19 +153,24 @@ const HomeAboutBlock = () => {
           className="home-about-img pull-right y-ovr about_page_template"
           style={{ opacity: 1 }}
         >
-          <a href="https://hbaarchitecture.com/2022/about">
-            <img
-              src="/images/home/about.jpg"
-              align="right"
-              className="img-responsive"
-            />
-            <div className="home-about-title" style={{ opacity: 1 }}>
-              <h2 className="home-project-title-head-h1" id="firstSlideHeading">
-                Go To About Page
-              </h2>
-              <div className="about-button-arrow"></div>
-            </div>
-          </a>
+          <Link href={"/about"}>
+            <a style={{ cursor: "pointer" }}>
+              <img
+                src="/images/home/about.jpg"
+                align="right"
+                className="img-responsive"
+              />
+              <div className="home-about-title" style={{ opacity: 1 }}>
+                <h2
+                  className="home-project-title-head-h1"
+                  id="firstSlideHeading"
+                >
+                  Go To About Page
+                </h2>
+                <div className="about-button-arrow"></div>
+              </div>
+            </a>
+          </Link>
         </div>
       </div>
     </>

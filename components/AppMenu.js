@@ -17,7 +17,7 @@ const AppMenu = () => {
             <div className="col-md-2 col-xs-9 text-left m-left paddLeftNone">
               <div className="logo">
                 <Link href={"/"}>
-                  <a>
+                  <a style={{ cursor: "pointer" }}>
                     <img src="/images/HBA-Logo-Illuminate-gray.svg" />
                   </a>
                 </Link>
@@ -28,24 +28,25 @@ const AppMenu = () => {
               <ul className="topMenu" style={{ opacity: 1 }}>
                 <li id="project" style={{ opacity: 0 }}>
                   <Link href={"/project"}>
-                    <a className="add-opacity  ">Projects</a>
+                    <a className="add-opacity" style={{ cursor: "pointer" }}>
+                      Projects
+                    </a>
                   </Link>
                   &nbsp;
                 </li>
 
                 <li id="about" style={{ opacity: 0 }}>
                   <Link href={"/about"}>
-                    <a className="add-opacity  ">About Us</a>
+                    <a className="add-opacity " style={{ cursor: "pointer" }}>
+                      About Us
+                    </a>
                   </Link>
                   &nbsp;
                 </li>
 
                 <li id="career" style={{ opacity: 0 }}>
                   <Link href={"/career"}>
-                    <a
-                      className="add-opacity "
-                      href="https://hbaarchitecture.com/2022/career"
-                    >
+                    <a className="add-opacity " style={{ cursor: "pointer" }}>
                       Career
                     </a>
                   </Link>
@@ -53,10 +54,7 @@ const AppMenu = () => {
                 </li>
                 <li id="contact" style={{ opacity: 0 }}>
                   <Link href={"/contact"}>
-                    <a
-                      className="add-opacity   "
-                      href="https://hbaarchitecture.com/2022/contact"
-                    >
+                    <a className="add-opacity   " style={{ cursor: "pointer" }}>
                       Contact
                     </a>
                   </Link>

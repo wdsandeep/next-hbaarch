@@ -42,7 +42,7 @@ const HomeFeaturedProjects = ({ featured_projects }) => {
                     <Link href={`/project/${item.seo_Url}`}>
                       <a style={{ cursor: "pointer" }}>
                         <img
-                          src={`https://hbaarchitecture.com/2022/images/uploads/projects_images/${item.image_name}`}
+                          src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/images/uploads/projects_images/${item.image_name}`}
                           alt={item.name}
                           className="visual img-responsive"
                         />

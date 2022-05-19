@@ -66,7 +66,7 @@ const AboutModalPopupMember = (props) => {
                           {props.data?.image_1 && (
                             <img
                               alt=" "
-                              src={`https://hbaarchitecture.com/2022/assets/uploads/partners/${props.data?.image_1}`}
+                              src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/assets/uploads/partners/${props.data?.image_1}`}
                             />
                           )}
                         </div>

@@ -531,7 +531,7 @@ const AppLogoBurger = ({ slider, project_images }) => {
                 >
                   <img
                     id="slider-image-1"
-                    src={`https://hbaarchitecture.com/2022/images/projects/${slide}`}
+                    src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/images/projects/${slide}`}
                     alt="slider-image"
                   />
                 </div>
@@ -556,7 +556,7 @@ const AppLogoBurger = ({ slider, project_images }) => {
                       >
                         <img
                           id={`slider-image-${index}`}
-                          src={`https://hbaarchitecture.com/2022/images/uploads/projects_images/${slide.desktop_slider}`}
+                          src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/images/uploads/projects_images/${slide.desktop_slider}`}
                           alt="slider-image"
                         />
                       </div>
@@ -599,7 +599,7 @@ const AppLogoBurger = ({ slider, project_images }) => {
                     onClick={() => {
                       handleViewMorePicture();
                     }}
-                    src="https://hbaarchitecture.com/2022/images/view-more-pictures.png"
+                    src="${process.env.NEXT_PUBLIC_IMAGE_PATH}/images/view-more-pictures.png"
                     alt="View more pictures"
                   />
                 </div>
@@ -619,7 +619,7 @@ const AppLogoBurger = ({ slider, project_images }) => {
                     <img
                       style={{ cursor: "pointer" }}
                       id="hide-more-picture"
-                      src="https://hbaarchitecture.com/2022/images/hide-slider.png"
+                      src="${process.env.NEXT_PUBLIC_IMAGE_PATH}/images/hide-slider.png"
                       alt="hide slider"
                     />
                   </div>
@@ -647,7 +647,7 @@ const AppLogoBurger = ({ slider, project_images }) => {
                                   id={`slider-thumb-image-${
                                     index * 5 + indexinside
                                   }`}
-                                  src={`https://hbaarchitecture.com/2022/images/uploads/projects_images/${item.slider_thumb}`}
+                                  src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/images/uploads/projects_images/${item.slider_thumb}`}
                                   alt="slider-image"
                                 />
                               </div>
@@ -688,7 +688,7 @@ const AppLogoBurger = ({ slider, project_images }) => {
                       <span className="counter">
                         <sup className="current">1</sup>
                         <img
-                          src="https://hbaarchitecture.com/2022/images/line.png"
+                          src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/images/line.png`}
                           alt="line"
                         />
                         <sub className="total">
@@ -705,7 +705,7 @@ const AppLogoBurger = ({ slider, project_images }) => {
                     >
                       <img
                         height="30"
-                        src="https://hbaarchitecture.com/2022/images/maximise.png"
+                        src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/images/maximise.png`}
                         alt="maximise image"
                       />
                     </div>
@@ -716,7 +716,7 @@ const AppLogoBurger = ({ slider, project_images }) => {
                         project_images.map((item) => (
                           <a
                             key={item.id}
-                            href={`https://hbaarchitecture.com/2022/images/uploads/projects_images/${item.image_name}`}
+                            href={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/images/uploads/projects_images/${item.image_name}`}
                           ></a>
                         ))}
                     </div>
@@ -743,7 +743,7 @@ const AppLogoBurger = ({ slider, project_images }) => {
                     <img
                       className="mobile-image-slider-img"
                       id={`mobile-slider-image-${index}`}
-                      src={`https://hbaarchitecture.com/2022/images/uploads/projects_images/${item.desktop_slider}`}
+                      src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/images/uploads/projects_images/${item.desktop_slider}`}
                       alt="slider-image"
                     />
                   </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import Script from "next/script";
+import Link from "next/link";
 const AppModalPopupLocation = (props) => {
   return (
     <>
@@ -177,20 +178,22 @@ const AppModalPopupLocation = (props) => {
                       </div>
 
                       <div className="col-xs-12 col-sm-12 col-md-7 nonePadd view-pro">
-                        <a
-                          href="https://hbaarchitecture.com/2022/project"
-                          className="all-page-heading marginLeft2 col-xs-12 col-sm-12"
-                          style={{
-                            whiteSpace: "normal",
-                            textTransform: "uppercase",
-                          }}
-                        >
-                          View Our Projects All Around the World{" "}
-                          <i
-                            className="fa fa-caret-right fa-style"
-                            style={{ color: "#807d7b", paddingLeft: "0.3em" }}
-                          ></i>
-                        </a>
+                        <Link href={"/project"}>
+                          <a
+                            className="all-page-heading marginLeft2 col-xs-12 col-sm-12"
+                            style={{
+                              whiteSpace: "normal",
+                              textTransform: "uppercase",
+                              cursor: "pointer",
+                            }}
+                          >
+                            View Our Projects All Around the World{" "}
+                            <i
+                              className="fa fa-caret-right fa-style"
+                              style={{ color: "#807d7b", paddingLeft: "0.3em" }}
+                            ></i>
+                          </a>
+                        </Link>
                       </div>
                     </div>
 

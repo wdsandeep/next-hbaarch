@@ -99,7 +99,7 @@ const AboutMembers = () => {
                             <img
                               className="member-img"
                               alt=" "
-                              src={`https://hbaarchitecture.com/2022/assets/uploads/partners/${item.image_1}`}
+                              src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/assets/uploads/partners/${item.image_1}`}
                             />
                           </div>
                         </div>
@@ -155,7 +155,7 @@ const AboutMembers = () => {
                             <img
                               className="member-img"
                               alt=" "
-                              src={`https://hbaarchitecture.com/2022/assets/uploads/partners/${item.image_1}`}
+                              src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/assets/uploads/partners/${item.image_1}`}
                             />
                           </div>
                         </div>

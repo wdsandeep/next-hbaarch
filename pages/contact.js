@@ -25,7 +25,7 @@ const contact = () => {
         />
         <link
           rel="shortcut icon"
-          href="https://hbaarchitecture.com/2022/assets/uploads/files/logo/f0360-favicon.ico"
+          href={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/assets/uploads/files/logo/f0360-favicon.ico`}
         />
       </Head>
       <AppLoader />
