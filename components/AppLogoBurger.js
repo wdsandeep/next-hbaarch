@@ -599,7 +599,7 @@ const AppLogoBurger = ({ slider, project_images }) => {
                     onClick={() => {
                       handleViewMorePicture();
                     }}
-                    src="${process.env.NEXT_PUBLIC_IMAGE_PATH}/images/view-more-pictures.png"
+                    src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/images/view-more-pictures.png`}
                     alt="View more pictures"
                   />
                 </div>
