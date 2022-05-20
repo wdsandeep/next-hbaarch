@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const AppModalPopupLocation = (props) => {
   useEffect(() => {
-    console.log("appmodalpopuplocation activated");
+    // console.log("appmodalpopuplocation activated");
   }, []);
 
   return (

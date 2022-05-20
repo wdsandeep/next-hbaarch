@@ -108,7 +108,7 @@ const AppFooterLocation = () => {
       <Script id="app_footer_location_js" strategy="lazyOnload">
         {`
         $(function() {
-          console.log('hi123');
+          // console.log('hi123');
           $( ".footerLocation2 #projectModal .location-dropdown .btn" ).bind( "click", function() {
             console.log('opened footer location');
             $("html, body").animate({ scrollTop: $(document).height() }, 200);

@@ -21,7 +21,7 @@ import AppLogoBurger from "../components/AppLogoBurger";
 function Home({ featured_projects }) {
   useEffect(() => {
     // site();
-    console.log("site is called at home");
+    // console.log("site is called at home");
   }, []);
   return (
     <div>
@@ -133,7 +133,7 @@ function Home({ featured_projects }) {
               >
                 <AppLogoBurger />
 
-                <HomeBxSlider />
+                <HomeBxSlider effectKey={Math.random()} />
                 {/* <!--bxslider--> */}
               </div>
             </div>

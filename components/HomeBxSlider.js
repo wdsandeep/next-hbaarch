@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import Script from "next/script";
 
-const HomeBxSlider = () => {
+const HomeBxSlider = ({ effectKey }) => {
   useEffect(() => {
-    $(window).load(function () {
+    $(document).ready(function () {
       setTimeout(() => {
         var homeSlider = $("#home_bxslider")
           .show()
@@ -24,7 +24,7 @@ const HomeBxSlider = () => {
         //homeSlider.stopAuto();
       }, 1500);
     });
-  }, []);
+  }, [effectKey]);
 
   return (
     <>
