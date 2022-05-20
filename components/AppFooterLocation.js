@@ -19,6 +19,15 @@ const AppFooterLocation = () => {
     const res = await response.json();
     // console.log(res);
     setLocationData(res);
+    // console.log("locatin-click li and a");
+    // var location_id = $(this).attr("data-location-id");
+    var position = $(this).attr("data-location");
+    if (position == "footer") {
+      $("#locationModal .modal-dialog").addClass("modal-dialog-bottom");
+    } else {
+      $("#locationModal .modal-dialog").removeClass("modal-dialog-bottom");
+    }
+    $("#locationModal").modal("show");
   };
   return (
     <>
@@ -111,6 +120,7 @@ const AppFooterLocation = () => {
 
           $(document).on('click', '.contact_office_email_popup', function() {
               event.preventDefault();
+              console.log('contact_office_email_popup clicked');
               var location_id = $(this).attr('data-location-id');
               $('ul[option-name="office_location_universal_form"]').siblings('button').children('label').text($('ul[option-name="office_location_universal_form"] li[data-id="'+location_id+'"]:first').text());
               $('#office_id').val(location_id);
@@ -130,15 +140,7 @@ const AppFooterLocation = () => {
 
 
           $('.location-click li, .location-click a').click(function(){
-            console.log('locatin-click li and a');
-            var location_id = $(this).attr('data-location-id');
-            var position = $(this).attr('data-location');
-            if(position == 'footer'){
-              $('#locationModal .modal-dialog').addClass('modal-dialog-bottom');
-          }else{
-              $('#locationModal .modal-dialog').removeClass('modal-dialog-bottom');
-          }
-          $('#locationModal').modal('show');
+            
           });
       
         

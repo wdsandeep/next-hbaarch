@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Script from "next/script";
 import Link from "next/link";
+
 const AppModalPopupLocation = (props) => {
+  useEffect(() => {
+    console.log("appmodalpopuplocation activated");
+  }, []);
+
   return (
     <>
       <style jsx>

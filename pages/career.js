@@ -623,41 +623,8 @@ $(".modal-submit-career").click(function(e){
           $('#form_loader').css({'display':'block'});
           $('.btnSubmit').attr('disabled','true');
 
-          $.ajax({
-              url: "https://hbaarchitecture.com/2022//ajax",
-              type: "post",
-              data: new FormData($("#uploadForm")[0]),
-              contentType: false,
-              cache: false,
-              processData:false,
-              success: function (result) {
-                  $('#uploadForm').css({'opacity':'1'});
-                  $('#form_loader').css({'display':'none'});
-                  $('.btnSubmit').attr('disabled','false');
-
-                   var result = JSON.parse(result);
-                   console.log(result);
-                   if(result.status == 'success'){
-                      $('#uploadForm')[0].reset();
-                      $('#location-section li').each(function(){
-                          if($(this).children('a').hasClass("select")){
-                              $(this).children('a').removeClass('select');
-                          }
-                      });
-                      $(".modal-body-form").hide();
-                      $(".modal-body-succes").show();
-
-                      //$('#success-career-message').show();
-                      //$('html,body').animate({ scrollTop: $("#success-career-message").offset().top},  'slow');
-                   }else if(result.status == 'captcha_fail'){
-                      alert('Invalid Captcha!');
-                      
-                   }
-              },
-              error: function () {
-                  alert('Something went wrong, Please try again');
-              }
-          });
+          
+          
 
        }
 
@@ -677,28 +644,8 @@ $(".modal-submit").click(function(e){
           $('#location_error').hide();
       }
       if($("#contact-request-form").valid()){
-          $.ajax({
-              url: "https://hbaarchitecture.com/2022//ajax",
-              type: "post",
-              data: {mode: 'contact_form_request', formData: contactFormData},
-              beforeSubmit: function () {
-                  return $("#contact-request-form").valid();
-              },
-              success: function (result) {
-                  console.log(result);
-                  console.log('-----------------');
-                   var result = JSON.parse(result);
-                   if(result.status == 'success'){
-                      $(".modal-body-form").hide();
-                      $(".modal-body-succes").show();
-                   }else if(result.status == 'captcha_fail'){
-                      alert('Invalid Captcha');
-                   }
-              },
-              error: function () {
-                  alert('Something went wrong, Please try again');
-              }
-          });
+          
+        
       }
   });
   
@@ -720,51 +667,6 @@ $(".modal-submit").click(function(e){
   });
   
   
-  
-  $(document).on('click', '.service-description-popup', function() {
-      var service_id = $(this).attr('data-service-id');
-      $.post("https://hbaarchitecture.com/2022/ajax", {mode: 'get-service-details', service_id: service_id}, function (result) {
-          console.log(result);
-          $('#serviceModal .modal-body').html(result);
-          $('#serviceModal').modal('show');
-      });
-  });
-  
-  if( /Android|webOS|iPhone|BlackBerry /i.test(navigator.userAgent) ) {
-      $('.leftLogos li:first').children('a').removeClass('select');
-      $('.leftLogos li').click(function(){
-          var service_id = $(this).children('a').attr('data-service-id');
-          $.post("https://hbaarchitecture.com/2022/ajax", {mode: 'get-service-details', service_id: service_id}, function (result) {
-              $('#serviceModal .modal-body').html(result);
-              $('#serviceModal').modal('show');
-          });
-      });
-      $('#serviceNav').click(function(){
-          if($('.leftLogos').is(':visible')){
-              $('.add-opacity').removeClass('opacityMenu');
-          }else{
-              $('.add-opacity').addClass('opacityMenu');
-          }
-      });
-  }
-  
-  $('#subscribe-newsletter').click(function(){
-      var email = $('#newsletter_email').val();
-      var pattern = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
-      if(email !='' && pattern.test(email) ){
-          $.post("https://hbaarchitecture.com/2022/ajax", {mode: 'save_newsletter_email', email: email}, function (result) {
-              $('#newsletter_email').val('');
-              $('#newsletter_error').html('You have successfully subscribed.').show();
-          });
-      }else{
-          $('#newsletter_error').html('Please enter valid email Id').show();
-          return false;
-      }
-  });
-  $('#newsletter_email').keypress(function(){
-      $('#newsletter_error').hide();
-  });
-});
 
 
  /* tarteucitron and modal body success  */
@@ -1038,41 +940,8 @@ $(".modal-submit-career").click(function(e){
                 $('#form_loader').css({'display':'block'});
                 $('.btnSubmit').attr('disabled','true');
 
-                $.ajax({
-                    url: "https://hbaarchitecture.com/2022//ajax",
-                    type: "post",
-                    data: new FormData($("#uploadForm")[0]),
-                    contentType: false,
-                    cache: false,
-                    processData:false,
-                    success: function (result) {
-                        $('#uploadForm').css({'opacity':'1'});
-                        $('#form_loader').css({'display':'none'});
-                        $('.btnSubmit').attr('disabled','false');
-
-                         var result = JSON.parse(result);
-                         console.log(result);
-                         if(result.status == 'success'){
-                            $('#uploadForm')[0].reset();
-                            $('#location-section li').each(function(){
-                                if($(this).children('a').hasClass("select")){
-                                    $(this).children('a').removeClass('select');
-                                }
-                            });
-                            $(".modal-body-form").hide();
-                            $(".modal-body-succes").show();
-
-                            //$('#success-career-message').show();
-                            //$('html,body').animate({ scrollTop: $("#success-career-message").offset().top},  'slow');
-                         }else if(result.status == 'captcha_fail'){
-                            alert('Invalid Captcha!');
-                            
-                         }
-                    },
-                    error: function () {
-                        alert('Something went wrong, Please try again');
-                    }
-                });
+                
+                
 
 
                 
@@ -1095,28 +964,8 @@ $(".modal-submit").click(function(e){
                 $('#location_error').hide();
             }
             if($("#contact-request-form").valid()){
-                $.ajax({
-                    url: "https://hbaarchitecture.com/2022//ajax",
-                    type: "post",
-                    data: {mode: 'contact_form_request', formData: contactFormData},
-                    beforeSubmit: function () {
-                        return $("#contact-request-form").valid();
-                    },
-                    success: function (result) {
-                        console.log(result);
-                        console.log('-----------------');
-                         var result = JSON.parse(result);
-                         if(result.status == 'success'){
-                            $(".modal-body-form").hide();
-                            $(".modal-body-succes").show();
-                         }else if(result.status == 'captcha_fail'){
-                            alert('Invalid Captcha');
-                         }
-                    },
-                    error: function () {
-                        alert('Something went wrong, Please try again');
-                    }
-                });
+                
+              
             }
         });
         $('.custom-select-option-contact li').click(function(){
@@ -1137,61 +986,6 @@ $(".modal-submit").click(function(e){
         });
         
         
-        
-        $('.location-click li, .location-click a').click(function(){
-            var location_id = $(this).attr('data-location-id');
-            var position = $(this).attr('data-location');
-            $.post("https://hbaarchitecture.com/2022/ajax", {mode: 'get_location_details', location_id: location_id}, function (result) {
-                $('#locationModal .modal-body').html(result);
-                if(position == 'footer'){
-                    $('#locationModal .modal-dialog').addClass('modal-dialog-bottom');
-                }else{
-                    $('#locationModal .modal-dialog').removeClass('modal-dialog-bottom');
-                }
-                $('#locationModal').modal('show');
-            });
-        });
-        
-        $(document).on('click', '.service-description-popup', function() {
-            var service_id = $(this).attr('data-service-id');
-            $.post("https://hbaarchitecture.com/2022/ajax", {mode: 'get-service-details', service_id: service_id}, function (result) {
-                console.log(result);
-                $('#serviceModal .modal-body').html(result);
-                $('#serviceModal').modal('show');
-            });
-        });
-        
-        if( /Android|webOS|iPhone|BlackBerry /i.test(navigator.userAgent) ) {
-            $('.leftLogos li:first').children('a').removeClass('select');
-            $('.leftLogos li').click(function(){
-                var service_id = $(this).children('a').attr('data-service-id');
-                $.post("https://hbaarchitecture.com/2022/ajax", {mode: 'get-service-details', service_id: service_id}, function (result) {
-                    $('#serviceModal .modal-body').html(result);
-                    $('#serviceModal').modal('show');
-                });
-            });
-            $('#serviceNav').click(function(){
-                if($('.leftLogos').is(':visible')){
-                    $('.add-opacity').removeClass('opacityMenu');
-                }else{
-                    $('.add-opacity').addClass('opacityMenu');
-                }
-            });
-        }
-        
-        $('#subscribe-newsletter').click(function(){
-            var email = $('#newsletter_email').val();
-            var pattern = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
-            if(email !='' && pattern.test(email) ){
-                $.post("https://hbaarchitecture.com/2022/ajax", {mode: 'save_newsletter_email', email: email}, function (result) {
-                    $('#newsletter_email').val('');
-                    $('#newsletter_error').html('You have successfully subscribed.').show();
-                });
-            }else{
-                $('#newsletter_error').html('Please enter valid email Id').show();
-                return false;
-            }
-        });
         $('#newsletter_email').keypress(function(){
             $('#newsletter_error').hide();
         });
