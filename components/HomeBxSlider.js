@@ -3,7 +3,7 @@ import Script from "next/script";
 
 const HomeBxSlider = () => {
   useEffect(() => {
-    $(document).ready(function () {
+    $(window).load(function () {
       setTimeout(() => {
         var homeSlider = $("#home_bxslider")
           .show()
