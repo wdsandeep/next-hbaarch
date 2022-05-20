@@ -22,7 +22,7 @@ const HomeBxSlider = () => {
             },
           });
         //homeSlider.stopAuto();
-      }, 500);
+      }, 1500);
     });
   }, []);
 
