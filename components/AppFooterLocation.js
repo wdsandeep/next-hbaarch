@@ -5,6 +5,7 @@ const AppFooterLocation = () => {
   const [locationData, setLocationData] = useState({});
 
   const handleLocation = async (locationId) => {
+    console.log("locationId = ", locationId);
     const response = await fetch("/api/getLocationInfo", {
       body: JSON.stringify({
         location_id: locationId,
@@ -15,7 +16,9 @@ const AppFooterLocation = () => {
       },
       method: "POST",
     });
-    setLocationData(await response.json());
+    const res = await response.json();
+    console.log(res);
+    setLocationData(res);
   };
   return (
     <>
